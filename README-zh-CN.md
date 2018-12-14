@@ -16,20 +16,19 @@
     <a href="./README.md">English</a> | <a href="./README-zh-CN.md">中文</a>
 </p>
 
-# The QueryPHP Application
+# QueryPHP 渐进式 PHP 常驻框架引擎
 
-QueryPHP is a modern, high performance PHP 7 resident framework, with engineer user experience as its historical mission, let every PHP application have a good framework.
+QueryPHP 是一款现代化的高性能 PHP 7 常驻框架，以工程师用户体验为历史使命，让每一个 PHP 应用都有一个好框架。
 
-A hundred percent coverage of the unit tests to facing the bug,based on Zephir implemented framework resident,with Swoole ecology to achieve business resident,
-now or in the future step by step. Our vision is **<span style="color:#e82e7d;">USE LEEVEL WITH SWOOLE DO BETTER</span>**, let your business to support more user services.
+百分之百单元测试覆盖直面 Bug 一剑封喉，基于 Zephir 实现框架常驻，依托 Swoole 生态实现业务常驻，此刻未来逐步渐进。 我们的愿景是 **<span style="color:#e82e7d;">USE LEEVEL WITH SWOOLE DO BETTER</span>**, 让您的业务撑起更多的用户服务。
 
-*The PHP Framework For Code Poem As Free As Wind, Starts From This Moment With QueryPHP.*
+*代码如诗，自由如风, 此刻携手 QueryPHP 共创美好.*
 
-* Site: <https://www.queryphp.com/>
-* API: <https://api.queryphp.com>
-* Document: <https://www.queryphp.com/docs/>
+* 官方网站: <https://www.queryphp.com/>
+* API 文档: <https://api.queryphp.com>
+* 开发文档: <https://www.queryphp.com/docs/>
 
-## The core packages
+## 核心包
 
  * QueryPHP On Github: <https://github.com/hunzhiwange/queryphp/>
  * QueryPHP On Gitee: <https://gitee.com/dyhb/queryphp/>
@@ -42,15 +41,15 @@ now or in the future step by step. Our vision is **<span style="color:#e82e7d;">
  * Packages From Hunzhiwange: <https://packagist.org/packages/hunzhiwange/>
  * Packages From Leevel: <https://packagist.org/packages/leevel/>
 
-## How to install
+## 如何安装
 
-## Base use
+## 基本使用
 
 ```
 composer create-project hunzhiwange/queryphp myapp dev-master
 ```
 
-## Visite it
+## 打开浏览器访问
 
 ![](home.jpg)
 
@@ -58,26 +57,26 @@ composer create-project hunzhiwange/queryphp myapp dev-master
 php leevel server <Visite http://127.0.0.1:9527/>
 ```
 
- * Home <http://127.0.0.1:9527/>
- * Mvc router <http://127.0.0.1:9527/api/test>
- * Mvc restful router http://127.0.0.1:9527/restful/123
- * Mvc restful router with method http://127.0.0.1:9527/restful/123/show
- * Annotation router http://127.0.0.1:9527/api/v1/petLeevelForApi/helloworld
- * Annotation router with bind http://127.0.0.1:9527/api/v2/withBind/foobar
+ * 首页 <http://127.0.0.1:9527/>
+ * Mvc 路由 <http://127.0.0.1:9527/api/test>
+ * Mvc restful 路由 http://127.0.0.1:9527/restful/123
+ * 指定方法的 Mvc restful 路由 http://127.0.0.1:9527/restful/123/show
+ * 注解路由 http://127.0.0.1:9527/api/v1/petLeevelForApi/helloworld
+ * 带有绑定的注解路由 http://127.0.0.1:9527/api/v2/withBind/foobar
  * php leevel link:public <http://127.0.0.1:9527/public/css/page.css>
  * php leevel link:storage <http://127.0.0.1:9527/storage/logo.png>
  * php leevel link:apis <http://127.0.0.1:9527/apis/>
  * php leevel link:debugbar <http://127.0.0.1:9527/debugbar/debugbar.css>
 
-## Connect database
+## 连接数据库
 
-### First to create a database.
+### 首先创建一个数据库.
 
 ```
 CREATE DATABASE IF NOT EXISTS myapp DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 ```
 
-### Then modify .env
+### 修改 .env
 
 ```
 vim .env
@@ -106,31 +105,31 @@ DATABASE_PASSWORD = 123456
 
 ```
 
-### Migrate
+### 执行数据库迁移命令
 
 ```
 php leevel migrate:migrate
 php leevel server
 ```
 
-### Test with database
+### 测试连接数据库
 
 <http://127.0.0.1:9527/api/entity>
 
 ```
 {
-    count: 4,
-    :trace: {
-        ...
-    }
+ count: 4,
+ :trace: {
+     ...
+ }
 }
 ```
 
-## Login to QueryVue
+## 登陆到 QueryVue 后台
 
-### Install frontend
+### 安装前端
 
-First to install the frontend,see more detail on `frontend/README.md`.
+第一步安装前端,细节信息可以在 `frontend/README.md` 查看.
 
 ```
 cd frontend
@@ -139,9 +138,9 @@ cnpm install
 npm run serve # npm run dev
 ```
 
-### Login
+### 登陆后台
 
-Then visite it. <http://127.0.0.1:9528/#/login>
+接着访问这个登陆地址. <http://127.0.0.1:9528/#/login>
 
 ![](login.jpg)
 
@@ -150,23 +149,23 @@ user: admin
 password: 123456
 ```
 
-### Home
+### 后台首页
 
 ![](index.jpg)
 
-### Resource list with red theme
+### 红色主题的资源列表
 
 ![](list.jpg)
 
-## Run Tests
+## 运行测试
 
-### First to create a test database.
+### 首先创建一个用于测试的数据库 test.
 
 ```
 CREATE DATABASE IF NOT EXISTS test DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 ```
 
-### Then modify .testing
+### 修改 .testing
 
 ```
 vim .testing
@@ -195,13 +194,13 @@ DATABASE_PASSWORD = 123456
 
 ```
 
-### Migrate
+### 执行数据库迁移命令
 
 ```
 php leevel migrate:migrate -e testing
 ```
 
-### Run
+### 运行
 
 ```
 _____________                           _______________
@@ -217,11 +216,11 @@ $php leevel migrate:migrate -e testing
 $php vendor/bin/phpunit tests
 ```
 
-## Base optimization
+## 基本优化
 
-### Debug
+### 关闭调试
 
-Modify .env or runtime/bootstrap/option.php.
+修改 .env 或者 runtime/bootstrap/option.php.
 
 ```
 // Environment production、testing and development
@@ -231,9 +230,9 @@ ENVIRONMENT = production
 DEBUG = false
 ```
 
-### Commands
+### 执行优化指令
 
-The commands below can make queryphp faster.
+下面的指令可以让 QueryPHP 运行得更加快速。
 
 ```
 php leevel router:cache
@@ -243,21 +242,21 @@ php leevel view:cache
 php leevel autoload (contains `composer dump-autoload --optimize`)
 ```
 
-Or
+或者
 
 ```
 php leevel production # `php leevel development` will back.
 ```
 
-## USE LEEVEL DO BETTER
+## 安装 Leevel 扩展让性能更好
 
 ### Windows
 
-Need to tests.
+后续会提供 dll 扩展.
 
 ### Linux
 
-You can download the source code.
+从下面的仓库下载源代码.
 
 ```
 git clone git@github.com:hunzhiwange/leevel.git
@@ -265,7 +264,7 @@ cd ext
 ```
 
 
-Then compile it.
+GCC 编译源码.
 
 ```
 $/path/to/phpize
@@ -273,53 +272,53 @@ $./configure --with-php-config=/path/to/php-config
 $make && make install
 ```
 
-Then add extension to your php.ini,you can see if installation is successful by command php -m.
+将扩展添加到你的 php.ini, 使用 php -m 查看扩展是否被安装.
 
 ```
 extension = leevel.so
 ```
 
-## Use Swoole With Ultra High Performance
+## 使用 swoole 提升性能
 
-This will coming back later.
+Swoole 后续会逐步提供支持.
 
 ```
 php leevel swoole:http
 ```
 
-## Unified Code Style
+## 统一团队代码风格
 
-### Install PHP Coding Standards Fixer
+### 安装 PHP 代码格式化工具
 
 <https://github.com/friendsofphp/php-cs-fixer>
 
-### Base use
+### 基本使用
 
 ```
 $cd /data/codes/queryphp
 $php-cs-fixer fix --config=.php_cs.dist
 ```
 
-### With Git hooks
+### 使用 Git 钩子
 
-Add a pre-commit for it.
+添加一个 pre-commit 钩子.
 
 ```
 ln -s ./build/pre-commit.sh ./.git/hooks/pre-commit
 ```
 
-Pass hook
+跳过钩子
 
 ```
 # git commit -h
 # git commit -n -m 'pass hook' #bypass pre-commit and commit-msg hooks
 ```
 
-## Thanks
+## 致谢
 
-Thanks my colleague [John.mao](https://github.com/maosea0125) for your selfless help in the development of this project and and let me have a new understanding, it makes QueryPHP more beautiful.
+感谢同事 [毛飞](https://github.com/maosea0125) 在开发这个项目过程中的无私帮助，让我有了很多新的认识, 这让 QueryPHP 变得更加的美好.
 
-Thanks for these excellent projects, we have absorbed a lot of excellent design and ideas, standing on the shoulders of giants for innovation.
+也非常感谢下面的这些优秀的开源软件, 我们也参考了很多的设计与思想, 让我们可以站在巨人的肩膀上保持创新.
 
  * QeePHP: <https://github.com/dualface/qeephp2_x/>
  * Swoole: <https://github.com/swoole/>
@@ -330,6 +329,6 @@ Thanks for these excellent projects, we have absorbed a lot of excellent design 
  * Doctrine: <https://github.com/doctrine/>
  * Phalcon: <https://github.com/phalcon/>
 
-## License
+## 版权协议
 
-The QueryPHP framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+QueryPHP 是一个基于 [MIT license](http://opensource.org/licenses/MIT) 授权许可协议的开源软件.
